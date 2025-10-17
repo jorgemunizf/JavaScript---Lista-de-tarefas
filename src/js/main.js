@@ -22,7 +22,7 @@ const cleanInput = () => {
 const createDeleteButton = (itemTask) => {
   itemTask.innerText += " ";
   const deleteButton = document.createElement("button");
-  deleteButton.innerText = "Apagar";
+  deleteButton.innerText = "delete";
   //   deleteButton.classList.add("delete")
   deleteButton.setAttribute("class", "delete");
   itemTask.appendChild(deleteButton);
@@ -34,6 +34,7 @@ const createTask = (textInpu) => {
   tasks.appendChild(itemTask);
   cleanInput();
   createDeleteButton(itemTask);
+  saveTasks();
 };
 
 btnTask.addEventListener("click", () => {
@@ -48,3 +49,16 @@ document.addEventListener("click", (e) => {
     element.parentElement.remove();
   }
 });
+
+const saveTasks = () => {
+  const itemTasks = tasks.querySelectorAll("li");
+  const tasksList = [];
+
+  for (let task of itemTasks) {
+    let textTask = task.innerText;
+    textTask = textTask.replace("delete", "").trim();
+    tasksList.push(textTask);
+  }
+  const taskJSON = JSON.stringify(tasksList);
+  localStorage.setItem("tasks", taskJSON);
+};
