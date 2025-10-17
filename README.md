@@ -1,4 +1,5 @@
 # 📝 Lista de Tarefas | To-Do List
+<img width="800" height="469" alt="image" src="https://github.com/user-attachments/assets/c22cf7e2-9b24-4879-8024-943e99d202fb" />
 
 Um projeto simples de **Lista de Tarefas (To-Do List)** desenvolvido com **HTML, CSS e JavaScript puro**, permitindo adicionar e remover tarefas de forma interativa e prática.  
 A simple **To-Do List project** built with **pure HTML, CSS, and JavaScript**, allowing users to add and remove tasks interactively.
